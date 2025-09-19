@@ -26,3 +26,42 @@
 // Use o método map() para criar um novo array que contenha o dobro de cada elemento do array
 // "numeros". Imprima o novo array no console.
 // Use o método forEach() para imprimir cada elemento do array "todasFrutas" no console.
+
+const frutas = ["maçã", "banana", "laranja"];
+console.log(frutas);
+console.log(frutas[1]);
+frutas.push("morango");
+console.log(frutas);
+frutas.shift();
+console.log(frutas);
+
+const numeros = [1, 2, 3, 4, 5];
+numeros.push(6);
+console.log(numeros);
+numeros.pop();
+console.log(numeros);
+numeros.unshift(0);
+console.log(numeros);
+numeros.shift();
+console.log(numeros);
+
+const frutas2 = ["manga", "abacaxi", "melancia"];
+const todasFrutas = frutas.concat(frutas2);
+
+console.log(todasFrutas);
+
+const primeirosDois = todasFrutas.slice(0, 2);
+console.log(primeirosDois);
+todasFrutas.splice(1, 1);
+console.log(todasFrutas);
+
+const indiceBanana = todasFrutas.indexOf("banana");
+console.log(indiceBanana);
+
+const frutasComM = todasFrutas.filter(fruta => fruta.startsWith('m'));
+console.log(frutasComM);
+
+const numerosDobro = numeros.map(num => num * 2);
+console.log(numerosDobro);
+
+todasFrutas.forEach(fruta => console.log(fruta));
